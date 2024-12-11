@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ledige jobs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--https://codedamn.com/news/frontend/how-to-put-image-and-text-side-by-side-in-html-->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: #F2F0E9;
+        }
+
+        .header{
+            padding: 40px;
+        }
+
+        h1{
+            font-size: 48px;
+            margin: 30px ;
+        }
+
+        .foto{
+            height: 70%;
+            width: 40%;
+            margin-left: 5%;
+            float: left;
+            border-radius: 20px 0 0 20px;
+        }
+
+        #job{
+            display: flex;
+        }
+
+        h3{
+            text-align: center;
+            color: #F2F0E9;
+        }
+
+        .farve{
+            background-color: #FD6E6D;
+            border-radius: 0 20px 0 0;
+            padding: 5%;
+        }
+
+        .text{
+            margin-right: 5%;
+
+        }
+
+        .wawe{
+            width: 100%;
+            margin-top: -10%;
+        }
+
+        .forklar-text{
+            text-align: center;
+            padding: 5%;
+            margin-top: 5%;
+        }
+
+        b{
+            font-weight: lighter;
+        }
+
+        .knap{
+            text-align: center;
+            margin-top: 15%;
+
+        }
+
+        button{
+            border-radius: 20px;
+            padding: 5%;
+            border-color: #FD6E6D;
+            color: #FD6E6D;
+            background-color: #F2F0E9;
+            font-weight: bold;
+        }
+
+        #joborange{
+            display: flex;
+        }
+
+        .farveorange{
+            background-color: #F28E4E;
+            border-radius: 0 20px 0 0;
+            padding: 5%;
+        }
+
+
+        .buttonorange{
+            border-radius: 20px;
+            padding: 5%;
+            border-color: #F28E4E;
+            color: #F28E4E;
+            background-color: #F2F0E9;
+            font-weight: bold;
+        }
+
+
+        #jobgrøn{
+            display: flex;
+        }
+
+        .farvegrøn{
+            background-color: #2F6F4C;
+            border-radius: 0 20px 0 0;
+            padding: 5%;
+        }
+
+
+        .buttongrøn{
+            border-radius: 20px;
+            padding: 5%;
+            border-color: #2F6F4C;
+            color: #2F6F4C;
+            background-color: #F2F0E9;
+            font-weight: bold;
+        }
+
+        #jobblå{
+            display: flex;
+        }
+
+        .farveblå{
+            background-color: #004294;
+            border-radius: 0 20px 0 0;
+            padding: 5%;
+        }
+
+
+        .buttonblå{
+            border-radius: 20px;
+            padding: 5%;
+            border-color: #004294;
+            color: #004294;
+            background-color: #F2F0E9;
+            font-weight: bold;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+<div class="header"></div>
+
+<!--overskift på siden-->
+<h1>Ledige jobs</h1>
+
+<!-- PINK BOKS -->
+<!--boksen som hele job boksen ligger i-->
+<section id="job">
+    <!--billedet på venstre side-->
+    <img class="foto" src="fotos/foto1.png" alt="stemningen">
+    <!--lavet boks til højre side af den store boks-->
+    <div class="text">
+        <!--lavet en boks omkrring overskrift, for at kunne ligge farve bagi -->
+        <div class="farve">
+            <h3>Sceneopsætning</h3>
+        </div>
+        <!-- lavet endnu en for at rykke på wawes til at passe til overskrift boksen-->
+        <div>
+            <!--billedet af den bølgede del af overskriften i boksen -->
+            <img class="wawe" src="fotos/pink-swirly.png" alt="bølgede kant">
+        </div>
+        <!--teksten under overskriften og knap -->
+        <div class="boks-text">
+            <!-- lavet div til at style på brødteksten-->
+            <div class="forklar-text">
+                <b>Hjælp til med Sceneopsætning</b>
+            </div>
+            <!--lavet en div til knap for at kunne rykke på den -->
+            <div class="knap">
+                <button>SE JOB</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- for at skabe mellemrum mellem boksne-->
+<br>
+<br>
+
+<!-- ORANGE BOKS -->
+<!--boks 2 som hele job boksen ligger i-->
+<section id="joborange">
+    <!--billedet på venstre side-->
+    <img class="foto" src="fotos/foto1.png" alt="stemningen">
+    <!--lavet boks til højre side af den store boks-->
+    <div class="text">
+        <!--lavet en boks omkrring overskrift, for at kunne ligge farve bagi -->
+        <div class="farveorange">
+            <h3>Musikalsk indslag</h3>
+        </div>
+        <!-- lavet endnu en for at rykke på wawes til at passe til overskrift boksen-->
+        <div>
+            <!--billedet af den bølgede del af overskriften i boksen -->
+            <img class="wawe" src="fotos/orange-swirly.png" alt="bølgede kant">
+        </div>
+        <!--teksten under overskriften og knap -->
+        <div class="boks-text">
+            <!-- lavet div til at style på brødteksten-->
+            <div class="forklar-text">
+                <b>frivillig til musikalske indslag på Campus+</b>
+            </div>
+            <!--lavet en div til knap for at kunne rykke på den -->
+            <div class="knap">
+                <button class="buttonorange">SE JOB</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- for at skabe mellemrum mellem boksne-->
+<br>
+<br>
+
+<!-- GRØN BOKS -->
+<!--boks 3 som hele job boksen ligger i-->
+<section id="jobgrøn">
+    <!--billedet på venstre side-->
+    <img class="foto" src="fotos/foto1.png" alt="stemningen">
+    <!--lavet boks til højre side af den store boks-->
+    <div class="text">
+        <!--lavet en boks omkrring overskrift, for at kunne ligge farve bagi -->
+        <div class="farvegrøn">
+            <h3>Madlavning</h3>
+        </div>
+        <!-- lavet endnu en for at rykke på wawes til at passe til overskrift boksen-->
+        <div>
+            <!--billedet af den bølgede del af overskriften i boksen -->
+            <img class="wawe" src="fotos/grøn-swirly.png" alt="bølgede kant">
+        </div>
+        <!--teksten under overskriften og knap -->
+        <div class="boks-text">
+            <!-- lavet div til at style på brødteksten-->
+            <div class="forklar-text">
+                <b>Hjælp til med maden på Campus+</b>
+            </div>
+            <!--lavet en div til knap for at kunne rykke på den -->
+            <div class="knap">
+                <button class="buttongrøn">SE JOB</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- for at skabe mellemrum mellem boksne-->
+<br>
+<br>
+
+<!-- BLÅ BOKS -->
+<!--boks 3 som hele job boksen ligger i-->
+<section id="jobblå">
+    <!--billedet på venstre side-->
+    <img class="foto" src="fotos/foto1.png" alt="stemningen">
+    <!--lavet boks til højre side af den store boks-->
+    <div class="text">
+        <!--lavet en boks omkrring overskrift, for at kunne ligge farve bagi -->
+        <div class="farveblå">
+            <h3>Frivillig medhjælper</h3>
+        </div>
+        <!-- lavet endnu en for at rykke på wawes til at passe til overskrift boksen-->
+        <div>
+            <!--billedet af den bølgede del af overskriften i boksen -->
+            <img class="wawe" src="fotos/blå-swirly.png" alt="bølgede kant">
+        </div>
+        <!--teksten under overskriften og knap -->
+        <div class="boks-text">
+            <!-- lavet div til at style på brødteksten-->
+            <div class="forklar-text">
+                <b>Bliv frivillig medhjælper på Campus+</b>
+            </div>
+            <!--lavet en div til knap for at kunne rykke på den -->
+            <div class="knap">
+                <button class="buttonblå">SE JOB</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>
