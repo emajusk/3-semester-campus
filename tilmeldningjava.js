@@ -14,13 +14,16 @@ document.getElementById('tilmeldForm').addEventListener('submit', function(event
     // Henter værdien fra inputfeltet til valgfri anden information
     const andet = document.getElementById('andet').value;
 
-    // Tjekker, om alle obligatoriske felter (navn, mail, mobil og skole) er udfyldt
-    if (navn && mail && mobil && skole) {
-        // Omdirigerer til en ny side med brugerens navn som en del af URL'en
-        window.location.href = `bekræftelse.html?navn=${encodeURIComponent(navn)}`;
+    if (!navn) {
+        document.querySelectorAll(".name-error").textContent = "";
+        return;
+    }
+    if (!navn) {
+        alert('mangler navn');
+        return;
+    }
 
-    } else {
-    // Hvis ikke alle obligatoriske felter er udfyldt, vises en fejlbesked
-    alert('Udfyld venligst alle påkrævede felter.');
-}
+
+    // Omdirigerer til en ny side med brugerens navn som en del af URL'en
+    window.location.href = `bekræftelse.html?navn=${encodeURIComponent(navn)}`;
 });

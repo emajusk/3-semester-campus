@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input:focus {
+            border-color: #007BFF;
+            outline: none;
+            box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+        }
+
+        button {
+            padding: 10px;
+            background-color: #004AAD;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        button:hover {
+            background-color: #00337F;
+        }
+    </style>
+
+</head>
+<body>
+<div class="form-container">
+    <h1>Tilmeld</h1>
+    <h2>Trin 1 af 1: Deltager info</h2>
+    <form id="tilmeldForm">
+        <label for="navn">Dit navn:</label>
+        <input type="text" id="navn" name="navn" placeholder="Indtast dit navn" required>
+
+        <label for="mail">Din mail:</label>
+        <input type="email" id="mail" name="mail" placeholder="Indtast din mail" required>
+
+        <label for="mobil">Mobil nummer:</label>
+        <input type="tel" id="mobil" name="mobil" placeholder="Indtast dit mobilnummer" required>
+
+        <label for="skole">*Angiv skole/uddannelse:</label>
+        <input type="text" id="skole" name="skole" placeholder="Angiv skole eller uddannelse" required>
+
+        <label for="andet">Andet:</label>
+        <input type="text" id="andet" name="andet" placeholder="Anden information (valgfrit)">
+
+        <button type="submit">Tilmeld</button>
+    </form>
+</div>
+<script src="tilmeldjs.js"></script>
+</body>
+</html>
