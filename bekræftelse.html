@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bekræftelse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #F2F0E9;
+        }
+
+        img{
+            width: 100%;
+        }
+
+        .overlay-text{
+        position: absolute;
+        top: 31%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        color: #F2F0E9;
+        padding: 10px 20px;
+        font-size: 20px;
+        }
+
+        .overlay-text2{
+            position: absolute;
+            top: 49%;
+            left: 47%;
+            color: #F2F0E9;
+            padding: 10px 20px;
+            font-size: 20px;
+        }
+
+        .knap{
+            margin-top: 2%;
+            margin-right: 50%;
+        }
+
+        .button{
+            position: absolute;
+            border-radius: 20px;
+            padding: 3%;
+            border-color: #004294;
+            color: #004294;
+            background-color: #F2F0E9;
+            font-weight: bold;
+            margin-left: 39%;
+            margin-top: -60%
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <img src="fotos/mønster.png" alt="baggrundsmønster">
+
+    <div class="overlay-text">
+        <h1>Tak for din tilmelding!</h1>
+    </div>
+    <div class="overlay-text2">
+        <p id="besked"></p> <!-- Her kommer brugerens navn til at blive vist -->
+    </div>
+</div>
+
+<div class="knap">
+    <button class="button"><a href="ledigejobs.html">Tilbage</a></button>
+</div>
+
+<script>
+    // Henter navnet fra URL-parametrene
+    const urlParams = new URLSearchParams(window.location.search);
+    const navn = urlParams.get('navn'); // Henter 'navn'-parameteren fra URL'en
+
+    // Viser navnet i beskeden, hvis det er tilgængeligt
+    if (navn) {
+        document.getElementById('besked').textContent = `Hej ${navn}, Vi glæder os utroligt meget til at se dig.`;
+    } else {
+        document.getElementById('besked').textContent = 'Vi er utrolig glade for du vil være en del af teamet.';
+    }
+</script>
+
+</body>
+</html>

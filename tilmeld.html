@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tilmeld</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    /*baggrundsfarvw*/
+    body{
+      background-color: #F2F0E9;
+    }
+
+    /*logo størrelse og placering*/
+    .logo{
+      width: 30%;
+      margin-left: 5%;
+    }
+
+    /*placering af boksen*/
+    .oversrkiftboks{
+      margin: auto; /* placering i midten */
+      background-color: white;
+      text-align: center;
+      border-radius: 20px;
+      padding: 30px 15px 30px 15px; /* den rigtige padding */
+    }
+
+    h2{
+      margin-top: 31px;
+    }
+
+    /* for at få den rigtige opstilling af formen*/
+    #tilmeldForm{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* styling af boksen*/
+    .container{
+        background-color: white;
+        border-radius: 20px;
+        padding: 30px 15px 30px 15px;
+    }
+
+    /* styling af felterne man skriver i*/
+    input{
+        background-color: #9EB7D6;
+        border-radius: 30px;
+        border: none;
+        padding: 5%;
+        font-size: 15px;
+    }
+
+    /* styling af knappen*/
+    button{
+        background-color: #004294;
+        border-radius: 30px;
+        border: none;
+        padding: 5%;
+        font-size: 20px;
+        color: white;
+        margin-top: 5%;
+    }
+
+
+  </style>
+
+</head>
+
+<body>
+<!--logo i venstre hjørne øverst på siden-->
+<img class="logo" src="fotos/logo.png" alt="logo">
+
+<div class="oversrkiftboks">
+  <h1>Tilmeld</h1>
+  <h2>Personlig information</h2>
+</div>
+
+<br>
+
+<div class="container">
+<form id="tilmeldForm">
+    <!-- Label og inputfelt til brugerens navn -->
+    <label for="navn">Dit navn:</label>
+    <input type="text" id="navn" name="navn" placeholder="Indtast dit navn" required>
+
+    <!-- Label og inputfelt til brugerens e-mail -->
+    <label for="mail">Din mail:</label>
+    <input type="email" id="mail" name="mail" placeholder="Indtast din mail" required>
+
+    <!-- Label og inputfelt til brugerens mobilnummer -->
+    <label for="mobil">Mobil nummer:</label>
+    <input type="tel" id="mobil" name="mobil" placeholder="Indtast dit mobilnummer" required>
+
+    <!-- Label og inputfelt til brugerens skole eller uddannelse -->
+    <label for="skole">Angiv skole/uddannelse:</label>
+    <input type="text" id="skole" name="skole" placeholder="Angiv skole eller uddannelse" required>
+
+    <!-- Label og inputfelt til anden valgfri information -->
+    <label for="andet">Andet:</label>
+    <input type="text" id="andet" name="andet" placeholder="Anden information (valgfrit)">
+
+    <!-- Knap til at indsende formularen -->
+    <button type="submit">Tilmeld</button>
+</form>
+
+
+<script src="tilmeldningjava.js"></script>
+
+</body>
+</html>
