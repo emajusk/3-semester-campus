@@ -1,11 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Forside</title>
+
+    <!--<link rel="..."--->
+
+    <style>
+body{
+    margin: 0;
+    font-family: "sans-serif";
+    color: white;
+    background: #202731;
+    overflow-x: hidden;
+}
+
+section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 170px;
+    padding: 100px 20vw;
+    font-family: sans-serif;
+
+}
+h1{
+    margin-left: -60%;
+    margin-bottom: 30%;
+    font-size: 23px;
+}
+
+.beige{
+    background: #FD6E6D;
+}
+
+.green{
+    background: #2F6F4C ;
+}
+.orange{
+    background: #F28E4E;
+}
+
+.blue{
+    background:#004294;
+}
+
+.curve{
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0;
+}
+
+.curve::before{
+   content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #202731;
+    transform: translate(85%, 60%);
+}
+
+.curve::after{
+  content: '';
+   display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #FD6E6D;
+    transform: translate(-4%, 40%);
+    z-index: -1;
+}
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(138% + 1.3px);
+    height: 180px;
+}
+
+.wave .shape-fill {
+    fill: #202731;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .wave svg {
+        width: calc(131% + 1.3px);
+        height: 81px;
+    }
+}
+
+header{
+    min-height: 60px;
+    background-color: beige;
+}
+
+.campus{
+    width: 80px;
+    margin-left: 15px;
+}
+
+.fotoforside{
+width: 100%;
+    filter: opacity(60%);
+    margin-bottom: -4px;
+}
+.forside{
+    background-color: bisque;
+}
+
+.jobs{
+    width: 140px;
+    height: 40px;
+    border-radius: 50px;
+    border-color: white;
+    border-width: 4px;
+    background-color: #FD6E6D;
+    color: white;
+    margin-left: -70%;
+}
+
+.program{
+    width: 140px;
+    height: 40px;
+    border-radius: 50px;
+    border-color: white;
+    border-width: 4px;
+    background-color: #202731;
+    color: white;
+    margin-right: -60%;
+    margin-top: -20%;
+
+}
+
+.h1grøn{
+    margin-left: -70px;
+}
+.h1kort{
+    margin-left: -80px;
+}
+
+.kort{
+    width: 140px;
+    height: 40px;
+    border-radius: 50px;
+    border-color: white;
+    border-width: 4px;
+    background-color: #004294;
+    color: white;
+    margin-right: -60%;
+    margin-top: -20%;
+}
+
+.event{
+    width: 170px;
+    position: absolute;
+    margin-right: -57%;
+    margin-top: -5%;
+}
+
+.h1jobs{
+    margin-left: -80%;
+}
+</style>
+
 </head>
 <body>
+<header>
+   <img class="campus" src="Untitled%20design-7-kopi%203.png">
+
+</header>
+
+<div class="forside">
+    <img class="fotoforside" src="Skærmbillede%202024-12-12%20kl.%2000.41.22.png">
+</div>
+
+
+<section class="beige">
+    <h1 class="h1jobs">SE LEDIGE <br/> JOBS</h1>
+    <button class="jobs">SE JOBS</button>
+    <img alt="pige" class="event" src="Skærmbillede%202024-12-13%20kl.%2000.34.02.png">
+
+    <div class="curve"></div>
+</section>
+
+<section>
+    <h1>FÅ ET OVERBLIK <br/> OVER DAGEN <br/> HER </h1>
+    <button class="program">PROGRAM</button>
+</section>
+
+<section class="green">
+    <h1 class="h1grøn"> FIND DINE KUPONER <br> HER </h1>
+    <p>Indsæt pil ikon her</p>
+
+    <div class="wave">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+
+    </div>
+</section>
+
+<section class="blue">
+    <h1 class="h1kort">Find netop det du har <br/> brug for ved hjælp af <br/> kortet</h1>
+    <button class="kort">KORT</button>
+</section>
+
 
 
 </body>
+
 </html>
