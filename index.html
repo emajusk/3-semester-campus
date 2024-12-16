@@ -49,42 +49,44 @@ body{
 body .fade-out {
   opacity: 0;
 }
-
   </style>
 </head>
 
 <body>
 
-<script>
-  // JavaScript to fade out and navigate to Page 2
-  function fadeOutAndRedirect(url) {
-    document.body.classList.add('fade-out');  // Apply fade-out effect
+<!--Brugte hjælp af chatgtp til denne funtion med viderførelse til ny side-->
 
-    // Wait for the fade-out effect to complete before redirecting to the next page
+<script>
+  // JavaScript til at navigere til side 2
+  function fadeOutAndRedirect(url) {
+    document.body.classList.add('fade-out');  // tilføj fade-out effekt
+
+    // venter på at fade-out effekten bliver færdig før den går videre til en ny side
     setTimeout(function() {
-      window.location.href = url;  // Navigate to the next page
-    }, 1000);  // 1000 ms = 1 second, matches the duration of the fade-out effect
+      window.location.href = url;  // Navigere til næste side
+    }, 1000);  // 1000 ms = 1 sekund, længden på fade-out effekten
   }
 
-  // Automatically trigger the fade-out and navigate after 3 seconds
+  // Vidersendelse til næste side med fade out, efter 5 sekunder
   setTimeout(function() {
-    fadeOutAndRedirect('vælg.html');  // Redirect to the second page
-  }, 5000);  // 3000 ms = 3 seconds, waiting before fading out
+    fadeOutAndRedirect('vælg.html');  // Redirect til næste side
+  }, 5000);  // 3000 ms = 3 sekund, venter før den fader ud
 
 </script>
 
-
+<!--Campus logo billede-->
 <header>
   <img alt="campus køge" class="forsidelogo" src="2.png">
 </header>
 
+<!--grøn linje på forsiden som skulle animeres-->
 <div class="svg-container">
   <svg width="430" height="500" viewBox="0 0 1440 975" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M0.5 4.5C780 17 840.514 397.525 857 509C878 651 979 805.5 1053 854.5C1138.79 911.307 1320 945.667 1440.5 970.5" stroke="#2F6F4C" stroke-width="8"/>
   </svg>
 </div>
 
-
+<!--Bølgerne på siden-->
 <footer>
     <img alt="bølger" class="bølgerforside" src="Untitled%20design-7.png">
 </footer>

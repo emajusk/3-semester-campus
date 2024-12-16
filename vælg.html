@@ -31,7 +31,7 @@
     .logovælg{
       width: 30%;
     }
-
+/*Frivillig knap*/
     .knap1{
       position: absolute;
       margin-top: 22%;
@@ -46,7 +46,7 @@
       color: white;
       font-size: 22px;
     }
-
+    /*Ledere og gæster*/
     .knap2{
       position: absolute;
       margin-top: 53%;
@@ -61,7 +61,7 @@
       color: white;
       font-size: 22px;
     }
-
+    /*Standholdere knap*/
     .knap3{
       position: absolute;
       margin-top: 84%;
@@ -76,7 +76,7 @@
       color: white;
       font-size: 22px;
     }
-
+    /*Lærere knap*/
     .knap4{
       position: absolute;
       margin-top: 110%;
@@ -91,7 +91,7 @@
       color: white;
       font-size: 22px;
     }
-
+    /*Klasser knap*/
     .knap5{
       position: absolute;
       margin-top: 140%;
@@ -122,12 +122,13 @@
 </head>
 
 <body>
+
 <script>
-  // Fade-in the page when it's loaded
+  // Fade-in side når den loader
   window.onload = function() {
     setTimeout(function() {
       document.body.classList.add('fade-in');
-    }, 500);  // Optional delay before applying fade-in effect
+    }, 500);  // delay før tilføjelse af fade-in effekt
   };
 </script>
 
@@ -135,6 +136,7 @@
   <img alt="logo på vælg side" class="logovælg" src="Untitled%20design-7-kopi%203.png">
 </header>
 
+<!--De forskellige knapper-->
 <div class="knap1">
   <a href="loading.html">
   <button class="knap1igen"><b>Frivillige</b></button>
@@ -142,21 +144,30 @@
 </div>
 
 <div class="knap2">
+  <a href="fejlside.html">
   <button class="knap2igen"><b>Ledere og gæster</b></button>
+  </a>
 </div>
 
 <div class="knap3">
+  <a href="fejlside.html">
   <button class="knap3igen"><b>Standholdere</b></button>
+  </a>
 </div>
 
 <div class="knap4">
+  <a href="fejlside.html">
   <button class="knap4igen"><b>Lærere</b></button>
+  </a>
 </div>
 
 <div class="knap5">
+  <a href="fejlside.html">
   <button class="knap5igen"><b>Klasser</b></button>
+  </a>
 </div>
 
+<!--Footer med ikoner-->
 <footer>
   <img alt="streger" class="streger" src="Untitled%20design-7-kopi%202.png">
 </footer>
