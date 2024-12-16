@@ -4,8 +4,79 @@
     <meta charset="UTF-8">
     <title>404</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #F2F0E9;
+            text-align: center;
+        }
+
+        /*logo størrelse og placering*/
+        .logo{
+            width: 30%;
+            margin-left: -60%;
+        }
+
+        .baggrund{
+            width: 100%;
+        }
+
+        .overlay-text{
+            position: absolute;
+            top: 34%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #F2F0E9;
+            padding: 10px 20px;
+            font-size: 50px;
+        }
+
+        .overlay-text2{
+            position: absolute;
+            top: 49%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #F2F0E9;
+            padding: 10px 1px;
+            font-size: 20px;
+        }
+
+
+        .button{
+            border-radius: 20px;
+            padding: 3%;
+            border-color: #FF9C5C;
+            color: #FF9C5C;
+            background-color: #F2F0E9;
+            font-weight: bold;
+        }
+
+    </style>
 </head>
 <body>
+
+<img class="logo" src="fotos/logo.png" alt="logo">
+
+<div class="container">
+
+    <img class="baggrund" src="fotos/orangemønster.png" alt="baggrundsmønster">
+
+    <div class="overlay-text">
+        <h1>404</h1>
+    </div>
+    <div class="overlay-text2">
+        <p>Vi kunne desværre ikke finde siden du ønsker </p> <!-- Her kommer brugerens navn til at blive vist -->
+    </div>
+</div>
+
+<div class="knap">
+    <button class="button"><a href="ledigejobs.html">Tilbage</a></button>
+</div>
 
 </body>
 </html>
