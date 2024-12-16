@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/a4b7cedec2.js" crossorigin="anonymous"></script>
+    <title>Forside</title>
+
+    <style>
+        body{
+            margin: 0;
+            font-family: "sans-serif";
+            color: white;
+            background: #F2F0E9;
+            overflow-x: hidden;
+        }
+
+        /* css til sektioner*/
+        section{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 170px;
+            padding: 100px 20vw;
+            font-family: sans-serif;
+        }
+        h1{
+            margin-left: -60%;
+            margin-bottom: 30%;
+            font-size: 23px;
+        }
+
+        /* nedenunder er farverne til de forskellige sektioner */
+        .beige{
+            background: #FD6E6D;
+        }
+
+        .green{
+            background: #2F6F4C ;
+        }
+        .orange{
+            background: #F28E4E;
+        }
+
+        .blue{
+            background:#004294;
+        }
+
+        /* Styling til bølge effekt */
+        .wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .wave svg {
+            position: relative;
+            display: block;
+            width: calc(138% + 1.3px);
+            height: 180px;
+        }
+
+        /* til mobil */
+        @media (max-width: 767px) {
+            .wave svg {
+                width: calc(131% + 1.3px);
+                height: 81px;
+            }
+        }
+        /* beige header */
+        header{
+            min-height: 50px;
+            background-color: #F2F0E9;
+        }
+        /* Campus Logo */
+        .campus{
+            width: 110px;
+            margin-left: 15px;
+        }
+
+        /* Styling til fotoforside container */
+        .fotoforside-container {
+            position: relative;
+            width: 100%;
+        }
+        /* billede øverst */
+        .fotoforside{
+            width: 100%;
+            margin-bottom: -4px;
+        }
+
+        /* Text overlay css */
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            font-size: 17px;
+            font-family: sans-serif;
+
+        }
+
+        .forside{
+            background-color: bisque;
+        }
+
+        /* jobs knap*/
+        .jobs{
+            width: 140px;
+            height: 40px;
+            border-radius: 50px;
+            border-color: white;
+            border-width: 4px;
+            background-color: #FD6E6D;
+            color: white;
+            margin-left: -70%;
+        }
+        /* program knap */
+        .program{
+            width: 140px;
+            height: 40px;
+            border-radius: 50px;
+            border-color: white;
+            border-width: 4px;
+            background-color: #f28e4e;
+            color: white;
+            margin-right: -60%;
+            margin-top: -20%;
+        }
+
+        /* text på grøn baggrund*/
+        .h1grøn{
+            margin-left: -70px;
+        }
+
+        /* tekst på blå baggrund */
+        .h1kort{
+            margin-left: -80px;
+        }
+
+        /* kort knap*/
+        .kort{
+            width: 140px;
+            height: 40px;
+            border-radius: 50px;
+            border-color: white;
+            border-width: 4px;
+            background-color: #004294;
+            color: white;
+            margin-right: -60%;
+            margin-top: -20%;
+        }
+        /* billede ved siden af "se ledige jobs" */
+        .event{
+            width: 170px;
+            position: absolute;
+            margin-right: -57%;
+            margin-top: -5%;
+        }
+        /* Text på pink baggrund */
+        .h1jobs{
+            margin-left: -80%;
+        }
+        /* Pil ikon */
+        .pil{
+            width: 30%;
+            margin-right: -50%;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #F2F0E9;
+            color: black;
+            text-align: center;
+        }
+
+        .fa-solid{
+            margin: 5%;
+            font-size: 180%;
+            color: black;
+        }
+
+        .fa-ticket{
+            padding-right: 40px;
+            padding-left: 40px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<!-- her er headeren med logo -->
+<header>
+    <img alt="campus logo" class="campus" src="Untitled%20design-7-kopi%203.png">
+</header>
+
+<!-- Sektion med fotoforside billede og text -->
+<div class="forside">
+    <div class="fotoforside-container">
+        <img alt="forside billede øverst på siden" class="fotoforside" src="Skærmbillede%202024-12-16%20kl.%2000.11.48.png">
+        <!-- Tekst oven på billedet -->
+        <div class="overlay-text">
+            <h2>BLIV FRIVILLIG</h2>
+            <p>Bliv en del af Campus+ team! Det er en af de ting, som skal opleves.</p>
+        </div>
+    </div>
+</div>
+
+<!-- lyserød sektion med knap, tekst og billede -->
+<section class="beige">
+    <h1 class="h1jobs">SE LEDIGE <br/> JOBS</h1>
+    <a href="ledigejobs.html">
+        <button class="jobs">SE JOBS</button>
+    </a>
+    <img alt="pige" class="event" src="Skærmbillede%202024-12-13%20kl.%2000.34.02.png">
+</section>
+
+<!-- orange sektion med knap, tekst og svg bølge -->
+<section class="orange">
+    <h1>FÅ ET OVERBLIK <br/> OVER DAGEN <br/> HER </h1>
+
+    <button class="program"><a href="fejlside.html">PROGRAM</a></button>
+
+    <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill" style="fill: rgb(253,110,109);"></path>
+        </svg>
+    </div>
+
+</section>
+
+<!-- grøn sektion med pil ikon, tekst og svg bølge -->
+<section class="green">
+    <h1 class="h1grøn"> FIND DINE KUPONER <br> HER </h1>
+    <svg class="pil" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><a href="fejlside.html"> <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License
+  - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></a></svg>
+    <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill" style="fill: #f28e4e;"></path>
+        </svg>
+    </div>
+
+</section>
+
+<!-- Blå sektion med tekst, knap og svg bølge-->
+<section class="blue">
+    <h1 class="h1kort">Find netop det du har <br/> brug for ved hjælp af <br/> kortet</h1>
+
+    <button class="kort"><a href="fejlside.html">KORT</a></button>
+
+    <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill" style="fill: #2F6F4C;"></path>
+        </svg>
+    </div>
+</section>
+
+<footer>
+    <div class="footer">
+        <a href="home.html">
+        <i class="fa-solid fa-house"></i>
+        </a>
+        <i class="fa-solid fa-ticket"></i>
+        <i class="fa-solid fa-map"></i>
+    </div>
+</footer>
+
+</body>
+</html>
