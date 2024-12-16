@@ -15,8 +15,15 @@
             padding: 0;
         }
 
+        /*logo størrelse og placering*/
+        .logo{
+            width: 30%;
+            margin-left: -60%;
+        }
+
         body {
             background-color: #F2F0E9;
+            text-align: center;
             font-family: "Inter", sans-serif;
             opacity: 1;
             transition: opacity 1s ease-in-out;
@@ -38,46 +45,47 @@
             }
         }
 
+
+
         img{
             width: 100%;
         }
 
-        /* Styling af første overlay tekst, placeret centralt på siden */
-        .overlay-text {
-            position: absolute; /* Absolut positionering for at placere elementet frit på siden */
-            top: 31%; /* Placeringen af teksten 31% nedefra */
-            left: 35%; /* Placeringen 35% fra venstre kant */
-            transform: translate(-50%, -50%); /* Centrerer teksten både horisontalt og vertikalt */
-            color: #F2F0E9; /* Lysegrå tekstfarve */
-            padding: 10px 20px; /* Lægger padding omkring teksten */
-            font-size: 20px; /* Sætter tekststørrelsen til 20px */
+        .container{
+            position: relative; /*placering*/
+            text-align: center;
         }
 
-        /* Styling af anden overlay tekst, lidt lavere end første */
-        .overlay-text2 {
-            position: absolute; /* Absolut positionering */
-            top: 49%; /* Placeringen af teksten 49% nedefra */
-            left: 47%; /* Placeringen 47% fra venstre kant */
-            color: #F2F0E9; /* Lysegrå tekstfarve */
-            padding: 10px 20px; /* Lægger padding omkring teksten */
-            font-size: 20px; /* Sætter tekststørrelsen til 20px */
+        h1{
+            position: absolute;/*for at placere teksten over billedet*/
+            top: 30%;
+            left: 30%;
+            transform: translate(-50%, -50%); /*placering af teksten*/
+            font-size: 32px;
+            color: #F2F0E9;
+            text-align: left;
+            padding-left: 15%;
         }
 
-        .knap{
-            margin-top: 2%;
-            margin-right: 50%;
+        p{
+            padding-right: 10%;
+            width: 44%; /* for at kunne tekstfeltet aflangt nok*/
+            position: absolute; /*for at placere teksten over billedet*/
+            top: 68%;
+            left: 73%;
+            transform: translate(-50%, -50%); /*placering af teksten*/
+            color: #F2F0E9;
+            text-align: right;
+            font-size: 20px;
         }
 
         .button{
-            position: absolute;
             border-radius: 20px;
             padding: 3%;
             border-color: #004294;
             color: #004294;
             background-color: #F2F0E9;
             font-weight: bold;
-            margin-left: 39%;
-            margin-top: -60%
         }
 
         /* Fade-in effekt for body (virker ikke) */
@@ -92,16 +100,12 @@
 
 <body>
 
+<img class="logo" src="fotos/logo.png" alt="logo">
+
 <div class="container">
-
     <img src="fotos/mønster.png" alt="baggrundsmønster">
-
-    <div class="overlay-text">
-        <h1>Tak for din tilmelding!</h1>
-    </div>
-    <div class="overlay-text2">
-        <p id="besked"></p> <!-- Her kommer brugerens navn til at blive vist -->
-    </div>
+    <h1>Tak for din tilmelding</h1>
+    <p id="besked"></p> <!-- Her kommer brugerens navn til at blive vist -->
 </div>
 
 <div class="knap">
