@@ -1,25 +1,35 @@
-// Tilføjer en event listener til formularen med id "tilmeldForm", som aktiveres ved indsendelse
+//fået hjælp af chat gpt
+
+/// Tilføjer en event listener til formularen med id "tilmeldForm"
 document.getElementById('tilmeldForm').addEventListener('submit', function(event) {
     // Forhindrer standardopførsel (som normalt ville genindlæse siden ved formularindsendelse)
     event.preventDefault();
 
-    // Henter værdien fra inputfeltet til navn
+    // Henter værdier fra inputfelterne
     const navn = document.getElementById('navn').value;
-    // Henter værdien fra inputfeltet til mail
     const mail = document.getElementById('mail').value;
-    // Henter værdien fra inputfeltet til mobilnummer
     const mobil = document.getElementById('mobil').value;
-    // Henter værdien fra inputfeltet til skole/uddannelse
     const skole = document.getElementById('skole').value;
-    // Henter værdien fra inputfeltet til valgfri anden information
     const andet = document.getElementById('andet').value;
 
+    // Validering af input
     if (!navn) {
-        document.querySelectorAll(".name-error").textContent = "";
+        alert('Mangler navn');
         return;
     }
-    if (!navn) {
-        alert('mangler navn');
+
+    if (!mail) {
+        alert('mangler mail');
+        return;
+    }
+
+    if (!mobil) {
+        alert('mangler mobil nummer');
+        return;
+    }
+
+    if (!skole) {
+        alert('mangler skole');
         return;
     }
 
