@@ -29,7 +29,7 @@ document.getElementById('tilmeldForm').addEventListener('submit', function(event
     }
 
     if (!skole) {
-        alert('mangler skole');
+        alert('mangler skole/uddannelse');
         return;
     }
 
