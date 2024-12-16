@@ -30,26 +30,27 @@
             width: 100%;
         }
 
-        /* Styling af overlay tekst (for "404"-fejlen), positioneret centralt */
-        .overlay-text {
-            position: absolute; /* Placere teksten absolut i forhold til den nærmeste positionerede forælder */
-            top: 34%; /* Placeringen af teksten 34% nedefra */
-            left: 50%; /* Placering 50% fra venstre kant */
-            transform: translate(-50%, -50%); /* Centrerer teksten både horisontalt og vertikalt */
-            color: #F2F0E9; /* Sætter tekstfarven til den lysegrå farve */
-            padding: 10px 20px; /* Lægger lidt padding omkring teksten */
-            font-size: 50px; /* Sætter tekststørrelsen til 50px */
+        .container{
+            position: relative;
+            text-align: center;
         }
 
-        /* Styling af den sekundære overlay tekst, placeres lidt lavere */
-        .overlay-text2 {
-            position: absolute; /* Ligesom overlay-text, absolut positioneret */
-            top: 46%; /* Placeringen af denne tekst er 46% nedefra */
-            left: 50%; /* Placering 50% fra venstre kant */
-            transform: translate(-50%, -50%); /* Centrerer teksten både horisontalt og vertikalt */
-            color: #F2F0E9; /* Sætter tekstfarven til den lysegrå farve */
-            padding: 10px 1px; /* Lægger lidt padding omkring den sekundære tekst */
-            font-size: 20px; /* Sætter tekststørrelsen til 20px */
+        h1{
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 65px;
+            color: #F2F0E9;
+        }
+
+        p{
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #F2F0E9;
+
         }
 
         .button{
@@ -68,16 +69,11 @@
 
 <img class="logo" src="fotos/logo.png" alt="logo">
 
+
 <div class="container">
-
     <img class="baggrund" src="fotos/orangemønster.png" alt="baggrundsmønster">
-
-    <div class="overlay-text">
-        <h1>404</h1>
-    </div>
-    <div class="overlay-text2">
-        <p>Vi kunne desværre ikke finde siden du ønsker </p> <!-- Her kommer brugerens navn til at blive vist -->
-    </div>
+    <h1>404</h1>
+    <p>Vi kunne desværre ikke finde siden du ønsker </p>
 </div>
 
 <div class="knap">
