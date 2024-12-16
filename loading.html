@@ -14,6 +14,10 @@
 
         body{
             background-color: #F2F0E9;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
         }
 
         @keyframes pulse {
@@ -53,13 +57,32 @@
         }
 
 
+        body .fade-out {
+            opacity: 0;
+        }
 
     </style>
 
 </head>
-
 <body>
 
+<script>
+    // JavaScript to fade out and navigate to Page 2
+    function fadeOutAndRedirect(url) {
+        document.body.classList.add('fade-out');  // Apply fade-out effect
+
+        // Wait for the fade-out effect to complete before redirecting to the next page
+        setTimeout(function() {
+            window.location.href = url;  // Navigate to the next page
+        }, 1000);  // 1000 ms = 1 second, matches the duration of the fade-out effect
+    }
+
+    // Automatically trigger the fade-out and navigate after 3 seconds
+    setTimeout(function() {
+        fadeOutAndRedirect('bekræftelse.html');  // Redirect to the second page
+    }, 3000);  // 3000 ms = 3 seconds, waiting before fading out
+
+</script>
 
     <h2 class="pulse">+</h2>
     <img src="fotos/tekstlogo.png" alt="logo uden plus tegnet">

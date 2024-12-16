@@ -8,6 +8,20 @@
   <style>
     body{
       background-color: #F2F0E9;
+      animation: fadeInAnimation ease 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+
     }
     .streger{
       margin-top: 5%;
@@ -93,11 +107,29 @@
       font-size: 22px;
     }
 
+    /* CSS for fade effect */
+    body {
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+    }
+
+    body .fade-in {
+      opacity: 1;
+    }
+
+
   </style>
 </head>
 
-
 <body>
+<script>
+  // Fade-in the page when it's loaded
+  window.onload = function() {
+    setTimeout(function() {
+      document.body.classList.add('fade-in');
+    }, 500);  // Optional delay before applying fade-in effect
+  };
+</script>
 
 <header>
   <img alt="logo på vælg side" class="logovælg" src="Untitled%20design-7-kopi%203.png">

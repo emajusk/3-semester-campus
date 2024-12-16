@@ -14,6 +14,23 @@
 
         body {
             background-color: #F2F0E9;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
         }
 
         img{
@@ -56,6 +73,11 @@
             margin-top: -60%
         }
 
+        body .fade-in {
+            opacity: 1;
+        }
+
+
 
     </style>
 </head>
@@ -89,6 +111,17 @@
     } else {
         document.getElementById('besked').textContent = 'Vi er utrolig glade for du vil være en del af teamet.';
     }
+
+
+
+    // Fade-in the page when it's loaded
+    window.onload = function() {
+        setTimeout(function() {
+            document.body.classList.add('fade-in');
+        }, 500);  // Optional delay before applying fade-in effect
+    };
+
+
 </script>
 
 </body>

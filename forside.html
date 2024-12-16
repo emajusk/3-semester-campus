@@ -12,6 +12,8 @@ body{
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
 
 }
 @keyframes fadeInAnimation {
@@ -44,11 +46,34 @@ body{
   align-items: center;
   justify-content: center;
 }
+
+body .fade-out {
+  opacity: 0;
+}
+
   </style>
 </head>
 
 <body>
-<script src="linje.js"></script>
+
+<script>
+  // JavaScript to fade out and navigate to Page 2
+  function fadeOutAndRedirect(url) {
+    document.body.classList.add('fade-out');  // Apply fade-out effect
+
+    // Wait for the fade-out effect to complete before redirecting to the next page
+    setTimeout(function() {
+      window.location.href = url;  // Navigate to the next page
+    }, 1000);  // 1000 ms = 1 second, matches the duration of the fade-out effect
+  }
+
+  // Automatically trigger the fade-out and navigate after 3 seconds
+  setTimeout(function() {
+    fadeOutAndRedirect('vælg.html');  // Redirect to the second page
+  }, 5000);  // 3000 ms = 3 seconds, waiting before fading out
+
+</script>
+
 
 <header>
   <img alt="campus køge" class="forsidelogo" src="2.png">
