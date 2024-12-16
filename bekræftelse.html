@@ -21,43 +21,46 @@
             opacity: 1;
             transition: opacity 1s ease-in-out;
 
+            /* Animation der får siden til at fade in ved indlæsning */
             animation: fadeInAnimation ease 3s;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
+            animation-iteration-count: 1; /* Animationen skal kun køres én gang */
+            animation-fill-mode: forwards; /* Bevarer den sidste tilstand af animationen (opacity 1) efter afslutning */
         }
 
+        /* Keyframes til fade-in animationen */
         @keyframes fadeInAnimation {
             0% {
-                opacity: 0;
+                opacity: 0; /* Starter med at være usynlig */
             }
 
             100% {
-                opacity: 1;
+                opacity: 1; /* Slutter med fuld synlighed */
             }
-
         }
 
         img{
             width: 100%;
         }
 
-        .overlay-text{
-        position: absolute;
-        top: 31%;
-        left: 35%;
-        transform: translate(-50%, -50%);
-        color: #F2F0E9;
-        padding: 10px 20px;
-        font-size: 20px;
+        /* Styling af første overlay tekst, placeret centralt på siden */
+        .overlay-text {
+            position: absolute; /* Absolut positionering for at placere elementet frit på siden */
+            top: 31%; /* Placeringen af teksten 31% nedefra */
+            left: 35%; /* Placeringen 35% fra venstre kant */
+            transform: translate(-50%, -50%); /* Centrerer teksten både horisontalt og vertikalt */
+            color: #F2F0E9; /* Lysegrå tekstfarve */
+            padding: 10px 20px; /* Lægger padding omkring teksten */
+            font-size: 20px; /* Sætter tekststørrelsen til 20px */
         }
 
-        .overlay-text2{
-            position: absolute;
-            top: 49%;
-            left: 47%;
-            color: #F2F0E9;
-            padding: 10px 20px;
-            font-size: 20px;
+        /* Styling af anden overlay tekst, lidt lavere end første */
+        .overlay-text2 {
+            position: absolute; /* Absolut positionering */
+            top: 49%; /* Placeringen af teksten 49% nedefra */
+            left: 47%; /* Placeringen 47% fra venstre kant */
+            color: #F2F0E9; /* Lysegrå tekstfarve */
+            padding: 10px 20px; /* Lægger padding omkring teksten */
+            font-size: 20px; /* Sætter tekststørrelsen til 20px */
         }
 
         .knap{
@@ -77,8 +80,9 @@
             margin-top: -60%
         }
 
+        /* Fade-in effekt for body (virker ikke) */
         body .fade-in {
-            opacity: 1;
+            opacity: 1; /* Gør body synlig */
         }
 
 
@@ -106,27 +110,23 @@
 
 <script>
     // Henter navnet fra URL-parametrene
-    const urlParams = new URLSearchParams(window.location.search);
+    const urlParams = new URLSearchParams(window.location.search); // Henter URL-parametrene
     const navn = urlParams.get('navn'); // Henter 'navn'-parameteren fra URL'en
 
-    // Viser navnet i beskeden, hvis det er tilgængeligt
+    // Hvis der er et navn, vises det i beskeden
     if (navn) {
-        document.getElementById('besked').textContent = `Hej ${navn}, Vi glæder os utroligt meget til at se dig.`;
+        document.getElementById('besked').textContent = `Hej ${navn}, Vi glæder os utroligt meget til at se dig.`; // Udskriver navn i besked
     } else {
-        document.getElementById('besked').textContent = 'Vi er utrolig glade for du vil være en del af teamet.';
+        document.getElementById('besked').textContent = 'Vi er utrolig glade for du vil være en del af teamet.'; // Hvis navn ikke findes, vises standardbesked
     }
 
-
-
-    // Fade-in the page when it's loaded
+    // Fade-in effekten af siden når den er indlæst
     window.onload = function() {
         setTimeout(function() {
-            document.body.classList.add('fade-in');
-        }, 500);  // Optional delay before applying fade-in effect
+            document.body.classList.add('fade-in'); // Anvender fade-in effekten på body
+        }, 500);  // Optional forsinkelse på 500ms før fade-in effekten starter
     };
 
-
 </script>
-
 </body>
 </html>

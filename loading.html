@@ -14,34 +14,32 @@
 
         body{
             background-color: #F2F0E9;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
-            opacity: 1;
-            transition: opacity 1s ease-in-out;
+            animation-iteration-count: 1; /* Animationen skal kun køre én gang */
+            animation-fill-mode: forwards; /* Beholder animationens sidste tilstand (f.eks. farve og størrelse) efter afslutning */
+            opacity: 1; /* Starter med fuld synlighed */
+            transition: opacity 1s ease-in-out; /* Animerer opacity ændring over 1 sekund */
         }
 
         @keyframes pulse {
             0% {
-                transform: scale(0.8);
-                color: #2F6F4C;
+                transform: scale(0.8); /* Starter animationen med mindre størrelse */
+                color: #2F6F4C; /* Grøn farve */
             }
-
-
             50% {
-                transform: scale(1.1);
-                color: #FD6E6D;
+                transform: scale(1.1); /* Øger størrelsen */
+                color: #FD6E6D; /* Rød farve */
             }
-
             100% {
-                transform: scale(0.8);
-                color: #004294;
+                transform: scale(0.8); /* Tilbage til startstørrelse */
+                color: #004294; /* Blå farve */
             }
         }
 
         .pulse {
             margin-left: 50%;
             margin-top: 70%;
-            animation: pulse 4s infinite;
+            animation: pulse 4s infinite; /* Anvender pulse animationen, som gentages uendeligt hver 4. sekund */
+        }
         }
 
         h2{
@@ -56,8 +54,9 @@
             margin-top: -19%;
         }
 
+        /* Fade-out effekt (virker ikke) */
         body .fade-out {
-            opacity: 0;
+            opacity: 0; /* Skaber en fading effekt ved at sætte opacity til 0 */
         }
 
     </style>
