@@ -1,4 +1,11 @@
 
+
+
+//Prøvede at animere svg stregen på forsiden med dette javascript.
+// Siden bruges dog ikke.
+
+
+
 let svg = document.querySelector("svg");
 let path = svg.querySelector("path");
 
